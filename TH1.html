@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('|----Coding Challenge #1----|');
+          var MarkWeights  = 78;
+           var MarkHeight   = 1.69;
+           var JohnWeight   = 92;
+           var JohnHeight    = 1.95; 
+
+          /* var MarkWeights 
+           var MarkHeight   
+           var JohnWeight   
+           var JohnHeight     */
+        console.log('MarkWeights: ' + MarkWeights + '\n' + 'MarkHeight:' + MarkHeight + '\n'+ 'JohnWeight:'+ JohnWeight+ '\n' + 'JohnHeight:'+ JohnHeight);
+         
+       /*BMI = mass/(height* height) */
+     /*  MarkWeights = prompt('What is Mark\'s Mass?' );
+       MarkHeight = prompt('What is Mark\'s Height?' );
+       JohnWeight   = prompt('What is John\'s Mass?' );
+       JohnHeight  = prompt('What is John\'s Height?' );   */
+
+
+       MarkBMI = MarkWeights/(MarkHeight*MarkHeight);
+       JohnBMI = JohnWeight/(JohnHeight*JohnHeight);
+       
+
+      var tinhMarkBMI = function (MarkWeights,MarkHeight){
+                 return () =>{
+                    console.log(MarkBMI.toFixed(2));
+                 }
+        }
+        console.log('MarkBMI:');
+            tinhMarkBMI(MarkWeights,MarkHeight)();
+
+
+            var tinhJohnBMI = function (JohnWeight,JohnHeight){
+                 return () =>{
+                    console.log(JohnBMI.toFixed(2));
+                 }
+        } 
+        
+        console.log('JohnBMI:');
+            tinhJohnBMI(JohnWeight,JohnHeight)();
+
+            
+           
+          console.log(`// Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.`);
+          var markHigherBMI = MarkBMI > JohnBMI;
+          console.log(markHigherBMI);
+
+          
+          console.log('|----Coding Challenge #2----|')
+      console.log(`//Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!`);
+          if(JohnBMI > MarkBMI)
+          console.log(`John's BMI is higher than Mark's!`);
+        else
+           console.log(`Mark's BMI is higher than John's!`);
+
+console.log(`//Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"`)
+
+
+if(JohnBMI > MarkBMI)
+          console.log(`John's BMI`+  + `is higher than Mark's!` );
+        else
+           console.log(`Mark's BMI  (${MarkBMI.toFixed(2)})  is higher than John's(${JohnBMI.toFixed(2)})!`);
+           
+        console.log("|------Code challenge #3------|");
+        
+         var dolphScore = [96,108,89];
+         var koalasScore = [88,91,110];
+
+         var dolphScore1 = [97,112,101];
+         var koalasScore1 = [109,95,123];
+
+         var dolphScore2 = [97,112,101];
+         var koalasScore2 = [109,95,106];
+         var average = (a,b,n)=>{
+               return a+b;
+         }
+         console.log("Dolphon Score:");
+         var aVeDolp= dolphScore.reduce(average)/dolphScore.length;
+         console.log(aVeDolp);
+
+         console.log("Koalas Score:");
+         var aVeKoal= koalasScore.reduce(average)/koalasScore.length;
+         console.log(aVeKoal);
+
+         if(aVeDolp > aVeKoal){
+           console.log("Diem Trung binh cua doi Dolphin cao hon => Doi thang cuoc: Dolphin");
+         } else if(aVeDolp < aVeKoal){
+           console.log("Diem Trung binh cua doi Koalas cao hon => Doi thang cuoc: Koalas");
+           
+         }else{
+          console.log("2 doi hoa nhau!");
+         }
+
+         console.log("~~With atleast 100 point~~")
+
+        var aVeDolp1 = dolphScore1.reduce(average)/dolphScore1.length;
+        var aVeDolp2 = dolphScore2.reduce(average)/dolphScore2.length;
+
+        var aVeKoal1 = koalasScore1.reduce(average)/koalasScore1.length;
+        var aVeKoal1 = koalasScore2.reduce(average)/koalasScore2.length;
+
+         var minimumScore = 100;
+         if(aVeDolp1 > aVeKoal1||aVeDolp1 >= 100){
+           console.log("Diem Trung binh cua doi Dolphin cao hon => Doi thang cuoc: Dolphin");
+         }
+         else if(aVeDolp1 > aVeKoal1 && aVeDolp1 < 100){
+           console.log("Khong doi nao chien thang");
+         }
+          else if(aVeDolp1 < aVeKoal2 && aVeKoal1 >= 100){
+           console.log("Diem Trung binh cua doi Koalas cao hon => Doi thang cuoc: Koalas");
+           
+         } else if(aVeDolp1 < aVeKoal2 && aVeKoal1 < 100){
+          console.log("Khong doi nao chien thang");
+         }
+         else if((aVeDolp1<100)==(aVeKoal1<100)){
+          console.log("Khong doi nao chien thang");
+         }else if((aVeDolp1>100)==(aVeKoal1>100)){
+          console.log("2 doi hoa nhau");
+         }
+console.log("|----Code Challenge #4----|");
+const bill = 275;
+
+const tip = bill * (15 / 100);
+const tip2 = bill * (20 / 100);
+
+bill >= 50 && bill <= 300 ? console.log(`tip is ${tip}`) : console.log(`tip is ${tip2}`);
+
+console.log("|-----Code challenge #5-----|");
+var dpl1 = [44, 23,71];
+var koa1 = [65,54,49];
+
+var dpl2 = [85,54,41];
+var koa2 = [23, 34, 27];
+    calcAve =(a,b)=>{
+       return a+b;
+    }
+      var dpl1aVe = dpl1.reduce(calcAve)/dpl1.length; 
+      var koa1aVe = koa1.reduce(calcAve)/koa1.length; 
+      var dpl2aVe = dpl1.reduce(calcAve)/dpl2.length; 
+      var koa2aVe= dpl1.reduce(calcAve)/koa2.length; 
+
+      console.log(dpl1aVe);
+      console.log(koa1aVe);
+      console.log(dpl2aVe);
+      console.log(koa2aVe);
+
+  checkWinner = function(dpl1aVe,koa1aVe){
+    if(dpl1aVe > koa1aVe )
+    console.log(` Dolphon Win! ${dpl1aVe}`);
+    if(dpl1aVe = koa1aVe)  console.log(` 2 Doi hoa ${dpl1aVe}= ${koa1aVe}`);
+    else
+    console.log(`Koalas Win! ${koa1aVe}`);
+}
+checkWinner(dpl1aVe,koa1aVe);
+console.log("|-----Code challenge #6-----|");
+myBills = [125, 555, 44, 57, 683, 12, 991, 33, 477, 28, 1215];
+const billCalc = Math.floor(Math.random() * myBills.length);
+const randomBill = myBills[billCalc];
+let tipValue = undefined;
+if (randomBill >50 && randomBill <300) {
+    tipValue = 15;
+}
+else if (randomBill <50 || randomBill >300) {
+    tipValue = 20;
+}
+let finalTip = tipValue / 100 * randomBill;
+
+function calcTip(tip) {
+    if (tipValue === 15) {
+        console.log(`The bill for the table is ${randomBill}, 
+        and the tip is : ${finalTip}.
+         The final payment is: ${randomBill + finalTip}`);
+    }
+        
+    else if (tipValue === 20) { // change the rquality operator to 2 or 3
+        console.log(`The bill for the table is ${randomBill}, 
+        and the tip is : ${finalTip}.
+         The final payment is: ${randomBill + finalTip}`);
+    }
+
+}
+
+// this supposed to save the results for the tips, and to store it in the array below this line.
+
+const tipSave = calcTip(finalTip);
+
+const tipList = [21, 22, 63]
+tipList.push(tipSave);
+
+
+
+    </script>
+</body>
+</html>

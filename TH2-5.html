@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<body>
+    <script>
+
+var url = 'https://65042ff8c8869921ae24a8f8.mockapi.io/demo1/api/v1/:endpoint';    
+
+var data = {};
+//data.firstname = "John2";
+//data.lastname = "Snow2";
+var json = JSON.stringify(data);
+
+var xhr = new XMLHttpRequest();
+xhr.open("PUT", url , true);
+xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+xhr.onload = function () {
+    var users = JSON.parse(xhr.responseText);
+    if (xhr.readyState == 4 && xhr.status == "200") {
+        console.table(users);
+    } else {
+        console.error(users);
+    }
+}
+xhr.send(json);
+
+
+    </script>
+</body>
+</html>
