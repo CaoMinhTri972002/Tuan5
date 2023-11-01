@@ -239,11 +239,11 @@ textstyle3:{
         backgroundColor:'white'
       },
       style6:{
-        flex:1,
+        flex:0.5,
         backgroundColor:'gray'
     },
     style7:{
-        flex:1,
+        flex:0.8,
         backgroundColor:'white'
       },
 
